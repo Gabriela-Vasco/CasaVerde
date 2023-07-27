@@ -5,7 +5,7 @@ export default function HowCard() {
         <div className="how-card">
             <img className="how-card__img" src="src/assets/imageHowCard.png"/>
             <div className="how-card__text">
-                <span>como conseguir</span>
+                <span>Como conseguir</span>
                 <h3>minha planta</h3>
                 <ul className="how-card__list">
                     <li>

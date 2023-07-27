@@ -1,0 +1,24 @@
+.shop-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-section__title {
+    text-align: center;
+    padding: 70px 0 0;
+}
+
+.shop-section__title span {
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.shop-section__title h3 {
+    font-family: Elsie Swash Caps;
+    font-size: 82px;
+    font-weight: 900;
+    margin: 0;
+    padding: 27px 0 0;
+}

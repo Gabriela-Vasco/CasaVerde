@@ -1,6 +1,6 @@
+import {Navbar, Newsletter, HowCard, ShopSection} from "../../../components/organisms"
 import "./Home.css"
 import "../../../assets/imagem-hero.png"
-import {Navbar, Newsletter, HowCard} from "../../../components/organisms"
 
 export default function Home(){
     return (
@@ -23,6 +23,8 @@ export default function Home(){
             <Newsletter />
 
             <HowCard />
+
+            <ShopSection />
         </div>
     )
 }
