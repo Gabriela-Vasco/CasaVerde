@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&display=swap');
+
+.home {
+    padding: 0 70px;
+    position: relative;
+}
+
+.home__background svg {
+    width: 700px;
+    height: 700px;
+    fill: #FFCB47;
+    position: absolute;
+    top: -10px;
+    right: -110px;
+    z-index: -1;
+}
+
+.home__background img {
+    width: 700px;
+    height: 1000px;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    z-index: -1;
+}
+
+.home__text {
+    margin-top: 100px;
+    width: 481px;
+}
+
+.home__text span {
+    font-size: 18px;
+    font-weight: 400;
+    color: #202020;
+    line-height: 26px;
+    opacity: 0.5;
+}
+
+.home__text h3 {
+    font-family: Elsie Swash Caps;
+    font-size: 82px;
+    font-weight: 900;
+    margin: 30px 0;
+}

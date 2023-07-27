@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 39px 0;
+}
+
+.navbar__menu a {
+    text-decoration: none;
+    margin-right: 2em;
+    color: #202020;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar__menu a:last-child {
+    margin-right: 0;
+}
+

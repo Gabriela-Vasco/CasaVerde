@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.newsletter__form {
+  margin-top: 50px;
+  display: flex;
+}
+
+.newsletter__label {
+    position: relative;
+  }
+  
+  .newsletter__label:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url("src/assets/icons8-nova-mensagem-24.png") center / contain no-repeat;
+    opacity: 0.5;
+  }
+  
+  .newsletter__input {
+    padding: 18px 32px;
+    border: none;
+    width: 430px;
+    height: 75px;
+    background: #FFF;
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.06);
+  }
+
+    .newsletter__input::placeholder {
+        color: #202020;
+        font-family: Montserrat;
+        font-size: 16px;
+        opacity: 0.30000001192092896;
+        padding-left: 16px;
+    }
+
+    .newsletter__input:focus {
+        outline: none;
+    }
+
+  .newsletter__button {
+    color: #202020;
+    font-family: Montserrat;
+    font-size: 14px;
+    width: 160px;
+    height: 75px;
+    background: #FFCB47;
+    box-shadow: 10px 10px 30px 0px rgba(255, 203, 71, 0.30);
+    border: none;
+  }
