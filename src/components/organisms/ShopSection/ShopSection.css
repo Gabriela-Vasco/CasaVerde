@@ -6,7 +6,7 @@
 
 .shop-section__title {
     text-align: center;
-    padding: 70px 0 0;
+    padding: 70px 0 50px;
 }
 
 .shop-section__title span {
@@ -21,4 +21,11 @@
     font-weight: 900;
     margin: 0;
     padding: 27px 0 0;
+}
+
+.shop-section__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 0 70px 153px;
 }

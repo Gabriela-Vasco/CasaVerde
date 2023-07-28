@@ -50,4 +50,15 @@
     background: #FFCB47;
     box-shadow: 10px 10px 30px 0px rgba(255, 203, 71, 0.30);
     border: none;
+    cursor: pointer;
+  }
+
+  .newsletter__button:hover {
+    background-color: #e7b732
+  }
+
+  .newsletter__form__error {
+    color: #FF0000;
+    font-weight: 550;
+    display: block;
   }

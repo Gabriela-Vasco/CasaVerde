@@ -6,7 +6,12 @@ export default function ShopCard({Imagem, NomePlanta, Valor}){
             <img src={Imagem} className="shop-card__img"/>
             <div className="shop-card__text">
                 <h4>{NomePlanta}</h4>
-                <span>{Valor}</span>
+                <span>R$ {
+                Valor.toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                  })
+                }</span>
                 <button className="shop-card__button">
                     Comprar
                     <svg className="shop-card__button--svg" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">

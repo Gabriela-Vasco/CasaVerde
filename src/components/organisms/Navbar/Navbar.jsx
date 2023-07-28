@@ -5,7 +5,7 @@ import "./Navbar.css"
 export default function Navbar(){
     return (
         <div className="navbar">
-            <NavLink to="home">
+            <NavLink to="/">
                 <Logo />
             </NavLink>
             
@@ -16,7 +16,7 @@ export default function Navbar(){
 
                 <NavLink to="depoimentos">Depoimentos</NavLink>
 
-                <NavLink to="videos">Meu Carrinho</NavLink>
+                <NavLink to="carrinho">Meu Carrinho</NavLink>
             </div>
         </div>
 
