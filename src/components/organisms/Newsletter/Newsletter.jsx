@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import SibApiV3Sdk from 'sib-api-v3-sdk';
+import 'dotenv/config';
+import emailjs from 'emailjs-com';
 import 'react-toastify/dist/ReactToastify.css';
-import "./Newsletter.css"
+import "./Newsletter.css";
 
 
 function useFormik({initialValues, validate}){
@@ -47,6 +48,7 @@ function useFormik({initialValues, validate}){
 
 export default function Newsletter(){
     const [isSubmited, setIsSubmited] = useState(false);
+    const form = useRef();
 
     const formik = useFormik({
         initialValues: {
@@ -78,6 +80,15 @@ export default function Newsletter(){
             }   
         );
 
+        function sendEmail(e) {
+            emailjs.sendForm(process.env.SERVICE, process.env.TEMPLATE, e.target, process.env.PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text + "Email enviado com sucesso!");
+            }, (error) => {
+                console.log(error.text);
+            });
+        }    
+
 
     function handleSubmit(e){
         e.preventDefault();
@@ -87,30 +98,9 @@ export default function Newsletter(){
             formik.setValues({email: ""})
             formik.setErrors({})
 
-            const options = {
-                method: 'POST',
-                headers: {
-                  accept: 'application/json',
-                  'content-type': 'application/json',
-                  'api-key': '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'
-                },
-                body: JSON.stringify({
-                  sender: {email: `${formik.values.email}`},
-                  name: 'Newsletter CasaVerde',
-                  htmlContent: `<!DOCTYPE html> <html> <body> <h1>Olá,</h1> <p>
-                  Boas-vindas à Casa Verde! Você se cadastrou em nossa newsletter e 
-                  vai começar a receber e-mails com as novidades de nossa loja e dicas 
-                  de como cuidar de suas plantas.
-                  Até logo!”</p> </body> </html>`,
-                  subject: 'Newsletter CasaVerde!'
-                })
-              };
-              
-              fetch('https://api.brevo.com/v3/emailCampaigns', options)
-                .then(response => response.json())
-                .then(response => console.log(response))
-                .catch(err => console.error(err));
         }
+
+        sendEmail(e)
         
         setTimeout(() => {
             setIsSubmited(false)
@@ -119,7 +109,7 @@ export default function Newsletter(){
     
     return (
         <div className="newsletter">
-            <form onSubmit={handleSubmit} className="newsletter__form">
+            <form ref={form} onSubmit={handleSubmit} className="newsletter__form">
             
                 <label className="newsletter__label">
                     <input
