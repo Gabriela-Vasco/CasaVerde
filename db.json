@@ -1,5 +1,5 @@
 {
-    "plants" : [
+   "plants": [
         {
            "name":"Ajuga Reptans",
            "preco":20,
@@ -37,40 +37,40 @@
            "ordem":2
         },
         {
-            "name":"Ajuga Reptans",
-            "preco":20,
-            "img":"ajuga01_card",
-            "ordem":0
-         },
-        {
-           "name":"Cordyline fruticosa",
-           "preco":35,
-           "img":"fruticosa01_card",
-           "ordem":3
-        },
-        {
-           "name":"Crassula ovata",
-           "preco":23.2,
-           "img":"ovata01_card",
-           "ordem":2
-        },
-        {
-            "name":"Ajuga Reptans",
-            "preco":20,
-            "img":"ajuga01_card",
-            "ordem":0
-         },
-        {
-           "name":"Cordyline fruticosa",
-           "preco":35,
-           "img":"fruticosa01_card",
-           "ordem":3
-        },
-        {
-           "name":"Crassula ovata",
-           "preco":23.2,
-           "img":"ovata01_card",
-           "ordem":2
-        }
-     ]
+         "name":"Ajuga Reptans",
+         "preco":20,
+         "img":"../src/assets/AjugaReptans.png",
+         "ordem":0
+      },
+      {
+          "name":"Cordyline fruticosa",
+          "preco":35,
+          "img":"../src/assets/CordylineFruticosa.png",
+          "ordem":3
+       },
+       {
+          "name":"Crassula ovata",
+          "preco":23.2,
+          "img":"../src/assets/CrassulaOvata.png",
+          "ordem":2
+       },
+       {
+          "name":"Cyperus rotundus",
+          "preco":20,
+          "img":"../src/assets/CyperusRotundus.png",
+          "ordem":0
+       },
+      {
+         "name":"Delairea odorata",
+         "preco":35.3,
+         "img":"../src/assets/DelaireaOdorata.png",
+         "ordem":3
+      },
+      {
+         "name":"Datura metel",
+         "preco":23.2,
+         "img":"../src/assets/DaturaMetel.png",
+         "ordem":2
+      }
+   ]
 }

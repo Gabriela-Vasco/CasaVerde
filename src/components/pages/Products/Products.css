@@ -1,0 +1,15 @@
+.products-container {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-title {
+    font-family: Elsie Swash Caps;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

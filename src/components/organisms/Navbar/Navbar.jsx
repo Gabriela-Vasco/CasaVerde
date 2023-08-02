@@ -10,13 +10,11 @@ export default function Navbar(){
             </NavLink>
             
             <div className="navbar__menu">    
-                <NavLink to="como">Como Fazer</NavLink>
+                <NavLink to="/produtos">Produtos</NavLink>
 
-                <NavLink to="ofertas">Ofertas</NavLink>
+                <NavLink to="/depoimentos">Depoimentos</NavLink>
 
-                <NavLink to="depoimentos">Depoimentos</NavLink>
-
-                <NavLink to="carrinho">Meu Carrinho</NavLink>
+                <NavLink to="/carrinho">Meu Carrinho</NavLink>
             </div>
         </div>
 

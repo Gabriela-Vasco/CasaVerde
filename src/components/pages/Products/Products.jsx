@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
 import ShopCard from "../../molecules/ShopCard/ShopCard"
-import "./ShopSection.css"
+import "./Products.css"
 
-export default function ShopSection(){
+export default function Products(){
     const [plants, setPlants] = useState([])
 
     const fetchData = async () => {
-        fetch('http://localhost:3000/plants?_start=0&_end=4')
+        fetch('http://localhost:3000/plants')
         .then( response => response.json())
         .then(data => setPlants(data)) }
 
@@ -26,15 +25,13 @@ export default function ShopSection(){
     )
 
     return (
-        <div className="shop-section">
-            <div className="shop-section__title">
-                <span>Conheça nossas</span>
-                <h3>ofertas</h3>
+        <div className="products-container">
+            <div className="products-title">
+                <h3>Nossos Produtos</h3>
             </div>
             <div className="shop-section__cards">
                 {plantsElements}
             </div>
-            <Link to="/produtos">Ver todos os produtos</Link>
         </div>
     )
 }
