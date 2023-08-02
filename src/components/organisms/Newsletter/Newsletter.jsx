@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import 'dotenv/config';
 import emailjs from 'emailjs-com';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Newsletter.css";
@@ -79,9 +78,12 @@ export default function Newsletter(){
                 theme: "light",
             }   
         );
+        const service = import.meta.env.VITE_SERVICE;
+        const template = import.meta.env.VITE_TEMPLATE;
+        const user = import.meta.env.VITE_PUBLIC_KEY;
 
         function sendEmail(e) {
-            emailjs.sendForm(process.env.SERVICE, process.env.TEMPLATE, e.target, process.env.PUBLIC_KEY)
+            emailjs.sendForm(service, template, e.target, user)
             .then((result) => {
                 console.log(result.text + "Email enviado com sucesso!");
             }, (error) => {
