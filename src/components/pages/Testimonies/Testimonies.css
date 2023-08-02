@@ -1,0 +1,42 @@
+.testimonies__background svg {
+    width: 700px;
+    height: 700px;
+    fill: #FFCB47;
+    position: absolute;
+    top: -10px;
+    right: -110px;
+    z-index: -1;
+}
+
+.testimonies__background img {
+    width: 700px;
+    height: 1000px;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    z-index: -1;
+}
+
+.testimonies__title {
+    padding-top: 120px;
+}
+
+.testimonies__title h3 {
+    font-family: Elsie Swash Caps;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonies__cards {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: 250px 250px 250px;
+    grid-auto-flow: column;
+    grid-gap: 0 70px;
+    padding: 0 70px 70px;
+}

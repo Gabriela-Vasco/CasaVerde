@@ -34,7 +34,9 @@ export default function ShopSection(){
             <div className="shop-section__cards">
                 {plantsElements}
             </div>
-            <Link to="/produtos">Ver todos os produtos</Link>
+            <div className="shop-section__button">
+                <Link className="shop-section__link" to="/produtos">Ver todos os produtos</Link>
+            </div>
         </div>
     )
 }

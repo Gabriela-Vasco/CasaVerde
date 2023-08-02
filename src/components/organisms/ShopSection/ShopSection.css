@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 70px;
 }
 
 .shop-section__title {
@@ -27,5 +28,19 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
-    padding: 0 70px 153px;
+    padding: 0 70px 70px;
+}
+
+.shop-section__button {
+    font-size: 16px;
+    background-color: #1C1C1C;
+    padding: 15px 15px;
+    margin-bottom: 27px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.shop-section__link{
+    text-decoration: none;
+    color: #ffffff;
 }
