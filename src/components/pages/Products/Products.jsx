@@ -4,8 +4,8 @@ import "./Products.css"
 
 export default function Products(){
     const [plants, setPlants] = useState([])
-    const [minPrice, setMinPrice] = useState(0)
-    const [maxPrice, setMaxPrice] = useState(1000)
+    const [minPrice, setMinPrice] = useState()
+    const [maxPrice, setMaxPrice] = useState()
     const [isCheckedName, setIsCheckedName] = useState(false);
     const [isCheckedPrice, setIsCheckedPrice] = useState(false);
 
@@ -18,28 +18,33 @@ export default function Products(){
         fetchData()
     }, [])
 
-    const plantsElements = plants.map((plant) => (
-            <ShopCard 
-                key={plant.id}
-                Imagem={plant.img}
-                NomePlanta={plant.name}
-                Valor={plant.preco}
-            />
-        )
-    )
+    useEffect(() => {   
+        console.log("render")
+    }, [plants])
 
+
+    const plantsElements = plants.map((plant) => (
+                                    <ShopCard
+                                        key={plant.id}
+                                        Imagem={plant.img}
+                                        NomePlanta={plant.name}
+                                        Valor={plant.preco}
+                                    />
+                                )
+                            )
+
+                            console.log(isCheckedName, isCheckedPrice)
     function handleChange(e){
-        if(e.target.value === "Nome"){
+        if(e.target.value === "Nome"){ 
             setIsCheckedName(!isCheckedName)
-            sortByName()
+            sortByName() 
         }
-        if(e.target.value === "Preço"){
+        if(e.target.value === "Preço") {
             setIsCheckedPrice(!isCheckedPrice)
             sortByPrice()
         }
     }
     
-
 
     function sortByName(){
         const sortedPlants = [...plants].sort((a, b) => {
@@ -52,6 +57,7 @@ export default function Products(){
             }
         })
         setPlants(sortedPlants)
+        console.log("sortByName")
     }
 
     function sortByPrice(){
@@ -107,18 +113,20 @@ export default function Products(){
             <div className="products__filter">
                 <span>Preço:</span>
                 <input 
+                    className="products__filter-input"
                     type="number" 
                     placeholder="Min"
                     onChange={(e) => setMinPrice(e.target.value)}
                     value={minPrice} 
                 />
                 <input 
+                    className="products__filter-input"
                     type="number" 
                     placeholder="Max" 
                     onChange={(e) => setMaxPrice(e.target.value)}
                     value={maxPrice}
                 />
-                <button onClick={filterPlants}>Filtrar</button>
+                <button className="products__filter-button" onClick={filterPlants}>Filtrar</button>
             </div>
             <div className="shop-section__cards">
                 {plantsElements}

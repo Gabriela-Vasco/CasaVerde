@@ -13,3 +13,42 @@
     justify-content: center;
     align-items: center;
 }
+
+.products__sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.products__sort > input[type="checkbox"] {
+    padding: 0 5px;
+} 
+
+.products__sort > label {
+    padding: 0 10px;
+}
+
+.products__filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.products__filter-input {
+    margin: 0 10px;
+    width: 70px;
+}
+
+.products__filter-button {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: #1C1C1C;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
