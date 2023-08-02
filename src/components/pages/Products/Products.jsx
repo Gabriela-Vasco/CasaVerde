@@ -4,6 +4,10 @@ import "./Products.css"
 
 export default function Products(){
     const [plants, setPlants] = useState([])
+    const [minPrice, setMinPrice] = useState(0)
+    const [maxPrice, setMaxPrice] = useState(1000)
+    const [isCheckedName, setIsCheckedName] = useState(false);
+    const [isCheckedPrice, setIsCheckedPrice] = useState(false);
 
     const fetchData = async () => {
         fetch('http://localhost:3000/plants')
@@ -24,10 +28,97 @@ export default function Products(){
         )
     )
 
+    function handleChange(e){
+        if(e.target.value === "Nome"){
+            setIsCheckedName(!isCheckedName)
+            sortByName()
+        }
+        if(e.target.value === "Preço"){
+            setIsCheckedPrice(!isCheckedPrice)
+            sortByPrice()
+        }
+    }
+    
+
+
+    function sortByName(){
+        const sortedPlants = [...plants].sort((a, b) => {
+            if(a.name > b.name){
+                return 1
+            } else if (a.name < b.name){
+                return -1
+            } else {
+                return 0
+            }
+        })
+        setPlants(sortedPlants)
+    }
+
+    function sortByPrice(){
+        const sortedPlants = [...plants].sort((a, b) => {
+            if(a.preco > b.preco){
+                return 1
+            } else if (a.preco < b.preco){
+                return -1
+            } else {
+                return 0
+            }
+        })
+        setPlants(sortedPlants)
+    }
+
+    function filterPlants(){
+        const filteredPlants = [...plants].filter((plant) => {
+            if(plant.preco >= minPrice && plant.preco <= maxPrice){
+                return true
+            } else {
+                return false
+            }
+        })
+        setPlants(filteredPlants)
+    }
+
     return (
         <div className="products-container">
             <div className="products-title">
                 <h3>Nossos Produtos</h3>
+            </div>
+            <div className="products__sort">
+                <span>Ordenar por:</span>
+                <label htmlFor="name">Nome</label>
+                <input 
+                    type="checkbox" 
+                    id="name" 
+                    name="name" 
+                    value="Nome"
+                    checked={isCheckedName}
+                    onChange={handleChange}
+                />
+                <label htmlFor="price">Preço</label>
+                <input 
+                    type="checkbox" 
+                    id="price" 
+                    name="price"
+                    value="Preço"
+                    checked={isCheckedPrice}
+                    onChange={handleChange}
+                />
+            </div>
+            <div className="products__filter">
+                <span>Preço:</span>
+                <input 
+                    type="number" 
+                    placeholder="Min"
+                    onChange={(e) => setMinPrice(e.target.value)}
+                    value={minPrice} 
+                />
+                <input 
+                    type="number" 
+                    placeholder="Max" 
+                    onChange={(e) => setMaxPrice(e.target.value)}
+                    value={maxPrice}
+                />
+                <button onClick={filterPlants}>Filtrar</button>
             </div>
             <div className="shop-section__cards">
                 {plantsElements}

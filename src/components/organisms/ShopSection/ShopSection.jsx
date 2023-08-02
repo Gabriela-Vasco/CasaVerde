@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import ShopCard from "../../molecules/ShopCard/ShopCard"
+import {ShopCard} from "../../molecules"
 import "./ShopSection.css"
 
 export default function ShopSection(){

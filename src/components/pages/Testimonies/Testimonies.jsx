@@ -1,4 +1,4 @@
-import TestimonyCard from "../../molecules/TestimonyCard/TestimonyCard"
+import {TestimonyCard} from "../../molecules"
 import "./Testimonies.css"
 
 export default function Testimonies(){
