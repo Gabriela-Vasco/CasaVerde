@@ -1,0 +1,130 @@
+.shopping-cart{
+    background: #ffffffd8;
+    box-shadow: 10px 10px 30px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 70px 70px;
+    padding: 50px;
+}
+
+.shopping-cart__table {
+    width: 100%;
+    border: 0.5px solid #807f7f93;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    text-align: center;
+}
+
+.shopping-cart__table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shopping-cart__table thead th{
+    background-color: #50C878;
+    border-collapse: collapse;
+    padding: 10px 0;
+}
+
+.shopping-cart__table th:nth-child(1) {
+    width: 40%;
+}
+
+.shopping-cart__table tr {
+    border-bottom: 0.5px solid #807f7f93;
+}
+
+.shopping-cart__table tr:last-child {
+    border-bottom: none;
+}
+
+.shopping-cart__table-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+}
+
+.shopping-cart__table-product p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.shopping-cart__table-empty {
+    padding: 15px;
+}
+
+.shopping-cart__table-btn {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1C1C1C;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 10px 7px;
+    text-align: center;
+    margin: 0 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.shopping-cart__total-btn {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    background: transparent;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: black;
+    border-left: 2px solid #1C1C1C;
+    position: relative;
+    transition: color 0.2s ease-in-out 0s;
+
+
+&:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+
+  &:before {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+  }
+
+  &:after {
+    right: -1px;
+    width: 1px;
+    background-color: black;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    z-index: 0;
+    transition: width 0.3s ease-in-out, 
+                transform 0.2s ease-in-out 0.3s, 
+                z-index 0.15s ease-in-out;
+  }
+
+  &:hover {
+    color: white;
+    transition: color 0.2s ease-in-out 0.25s;
+    background-color: #1C1C1C;
+
+    &:after {
+      z-index: -1;
+      transform: rotate(0deg);
+      width: 100%;
+      
+      transition: transform 0.2s ease-in-out, 
+                  width 0.3s ease-in-out 0.2s;
+    }
+  }
+}

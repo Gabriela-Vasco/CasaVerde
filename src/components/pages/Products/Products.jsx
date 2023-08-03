@@ -8,6 +8,7 @@ export default function Products(){
     const [maxPrice, setMaxPrice] = useState()
     const [isCheckedName, setIsCheckedName] = useState(false);
     const [isCheckedPrice, setIsCheckedPrice] = useState(false);
+    const [cart, setCart] = useState([]);
 
     const fetchData = async () => {
         fetch('http://localhost:3000/plants')
@@ -18,22 +19,18 @@ export default function Products(){
         fetchData()
     }, [])
 
-    useEffect(() => {   
-        console.log("render")
-    }, [plants])
-
 
     const plantsElements = plants.map((plant) => (
                                     <ShopCard
                                         key={plant.id}
+                                        id={plant.id}
                                         Imagem={plant.img}
                                         NomePlanta={plant.name}
                                         Valor={plant.preco}
+                                        addToCart={() => setCart([...cart, { Imagem, NomePlanta, Valor, quantidade: 1}])}
                                     />
                                 )
                             )
-
-                            console.log(isCheckedName, isCheckedPrice)
     function handleChange(e){
         if(e.target.value === "Nome"){ 
             setIsCheckedName(!isCheckedName)
@@ -57,7 +54,6 @@ export default function Products(){
             }
         })
         setPlants(sortedPlants)
-        console.log("sortByName")
     }
 
     function sortByPrice(){

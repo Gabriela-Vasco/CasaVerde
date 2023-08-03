@@ -25,12 +25,11 @@
 }
 
 .home__text {
-    padding-top: 150px;
+    padding-top: 50px;
     width: 481px;
 }
 
 .home__text span {
-    margin-top: 100px;
     font-size: 18px;
     font-weight: 400;
     color: #202020;
@@ -44,3 +43,4 @@
     font-weight: 900;
     margin: 30px 0;
 }
+

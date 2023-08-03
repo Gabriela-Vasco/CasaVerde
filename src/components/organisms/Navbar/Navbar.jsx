@@ -3,6 +3,10 @@ import Logo from "../../atoms/Logo/Logo";
 import "./Navbar.css"
 
 export default function Navbar(){
+    const activeStyles = {
+        color: "#228B22"
+    }
+
     return (
         <div className="navbar">
             <NavLink to="/">
@@ -10,11 +14,26 @@ export default function Navbar(){
             </NavLink>
             
             <div className="navbar__menu">    
-                <NavLink to="/produtos">Produtos</NavLink>
+                <NavLink 
+                    to="/depoimentos"
+                    style={({isActive}) => isActive ? activeStyles : null}
+                >
+                    Depoimentos
+                </NavLink>
 
-                <NavLink to="/depoimentos">Depoimentos</NavLink>
+                <NavLink 
+                    to="/produtos"
+                    style={({isActive}) => isActive ? activeStyles : null}
+                >
+                    Produtos
+                </NavLink>
 
-                <NavLink to="/carrinho">Meu Carrinho</NavLink>
+                <NavLink 
+                    to="/carrinho"
+                    style={({isActive}) => isActive ? activeStyles : null}
+                >
+                    Meu Carrinho
+                </NavLink>
             </div>
         </div>
 

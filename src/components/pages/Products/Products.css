@@ -1,5 +1,4 @@
 .products-container {
-    padding-top: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -33,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 0 50px;
 }
 
 .products__filter-input {

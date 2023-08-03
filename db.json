@@ -1,72 +1,84 @@
 {
    "plants": [
         {
+           "id": 1,
            "name":"Ajuga Reptans",
            "preco":20,
            "img":"../src/assets/AjugaReptans.png",
            "ordem":0
         },
         {
+            "id": 2,
             "name":"Cordyline fruticosa",
             "preco":35,
             "img":"../src/assets/CordylineFruticosa.png",
             "ordem":3
          },
          {
+            "id": 3,
             "name":"Crassula ovata",
             "preco":23.2,
             "img":"../src/assets/CrassulaOvata.png",
             "ordem":2
          },
          {
+            "id": 4,
             "name":"Cyperus rotundus",
             "preco":20,
             "img":"../src/assets/CyperusRotundus.png",
             "ordem":0
          },
         {
+           "id": 5,
            "name":"Delairea odorata",
            "preco":35.3,
            "img":"../src/assets/DelaireaOdorata.png",
            "ordem":3
         },
         {
+           "id": 6,
            "name":"Datura metel",
            "preco":23.2,
            "img":"../src/assets/DaturaMetel.png",
            "ordem":2
         },
         {
+         "id" : 7,
          "name":"Ajuga Reptans",
          "preco":20,
          "img":"../src/assets/AjugaReptans.png",
          "ordem":0
       },
       {
+          "id": 8,
           "name":"Cordyline fruticosa",
           "preco":35,
           "img":"../src/assets/CordylineFruticosa.png",
           "ordem":3
        },
        {
+          "id": 9,
           "name":"Crassula ovata",
           "preco":23.2,
           "img":"../src/assets/CrassulaOvata.png",
           "ordem":2
        },
        {
+          "id": 10,
           "name":"Cyperus rotundus",
           "preco":20,
           "img":"../src/assets/CyperusRotundus.png",
           "ordem":0
        },
       {
+         "id": 11,
          "name":"Delairea odorata",
          "preco":35.3,
          "img":"../src/assets/DelaireaOdorata.png",
          "ordem":3
       },
       {
+         "id": 12,
          "name":"Datura metel",
          "preco":23.2,
          "img":"../src/assets/DaturaMetel.png",

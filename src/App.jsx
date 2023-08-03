@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import  { Layout, Home, Products, Testimonies } from './components/pages'
+import  { Layout, Home, Products, Testimonies, ShoppingCart } from './components/pages'
 import './App.css'
 
 
@@ -13,7 +13,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="produtos" element={<Products />}/>
             <Route path="depoimentos" element={<Testimonies />}/>
-            <Route path="carrinho"/>
+            <Route path="carrinho" element={<ShoppingCart />}/>
           </Route>
         </Routes>
       </BrowserRouter>

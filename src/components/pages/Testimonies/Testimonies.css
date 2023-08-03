@@ -1,9 +1,9 @@
 .testimonies__background svg {
-    width: 700px;
-    height: 700px;
+    max-width: 700px;
+    height: auto;
     fill: #FFCB47;
     position: absolute;
-    top: -10px;
+    bottom: 0;
     right: -110px;
     z-index: -1;
 }
@@ -17,10 +17,6 @@
     z-index: -1;
 }
 
-.testimonies__title {
-    padding-top: 120px;
-}
-
 .testimonies__title h3 {
     font-family: Elsie Swash Caps;
     width: 100%;
@@ -32,7 +28,7 @@
 }
 
 .testimonies__cards {
-    margin-top: 80px;
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 400px);
     grid-template-rows: 250px 250px 250px;
@@ -40,3 +36,7 @@
     grid-gap: 0 70px;
     padding: 0 70px 70px;
 }
+
+
+  
+
