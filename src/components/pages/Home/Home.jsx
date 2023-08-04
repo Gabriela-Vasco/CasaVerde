@@ -1,6 +1,6 @@
 import {Newsletter, HowCard, ShopSection} from "../../../components/organisms"
 import "./Home.css"
-import ".src\assets\imagem-hero.png"
+import "public/imagem-hero.png"
 
 export default function Home(){
     return (
