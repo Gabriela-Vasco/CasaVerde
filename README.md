@@ -1,10 +1,27 @@
-# React + Vite
+# CasaVerde:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido utilizando React (Vite), Json Server (como API) e EmailJS (para o envio de emails da newsletter)
 
-Currently, two official plugins are available:
+Demo: https://casa-verde-xi.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requisitos
+- Node.js 
+- Yarn ou npm
 
-api key: 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
+## Instalação
+1. Clone o repositório
+2. Navegue até a pasta do projeto no terminal
+3. Execute o comando yarn ou npm install para instalar as dependências
+
+## Utilização
+1. Execute o comando yarn dev ou npm run dev para iniciar a aplicação localmente;
+2. Execute o comando npx json-server --watch db.json para iniciar o servidor;
+3. Abra o navegador e acesse o endereço http://localhost:5173
+
+## Armazenamento
+As opções do carrinho de compras são salvas no localStorage do navegador e serão carregadas quando a página for reaberta, até o usuário clicar em "Finalizar compra".
+
+##
+
+<img src="https://github.com/Gabriela-Vasco/CasaVerde/blob/master/CasaVerde.PNG?raw=true" />
+
