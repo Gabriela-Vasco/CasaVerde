@@ -11,7 +11,7 @@ export default function Products(){
     const [cart, setCart] = useState([]);
 
     const fetchData = async () => {
-        fetch('http://localhost:3000/plants')
+        fetch('https://my-json-server.typicode.com/Gabriela-Vasco/JsonServer/plants')
         .then( response => response.json())
         .then(data => setPlants(data)) }
 

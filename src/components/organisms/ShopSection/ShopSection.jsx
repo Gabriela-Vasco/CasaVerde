@@ -7,7 +7,7 @@ export default function ShopSection(){
     const [plants, setPlants] = useState([])
 
     const fetchData = async () => {
-        fetch('http://localhost:3000/plants?_start=0&_end=4')
+        fetch('https://my-json-server.typicode.com/Gabriela-Vasco/JsonServer/plants')
         .then( response => response.json())
         .then(data => setPlants(data)) }
 
@@ -15,7 +15,7 @@ export default function ShopSection(){
         fetchData()
     }, [])
 
-    const plantsElements = plants.map((plant) => (
+    const plantsElements = plants.slice(0, 4).map((plant) => (
             <ShopCard 
                 key={plant.id}
                 Imagem={plant.img}
