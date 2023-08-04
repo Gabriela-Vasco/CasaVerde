@@ -16,7 +16,7 @@
     top: 0;
     bottom: 0;
     width: 20px;
-    background: url("src/assets/icons8-nova-mensagem-24.png") center / contain no-repeat;
+    background: url("../../../assets/icons8-nova-mensagem-24.png") center / contain no-repeat;
     opacity: 0.5;
   }
   

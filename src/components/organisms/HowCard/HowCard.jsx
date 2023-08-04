@@ -1,9 +1,10 @@
 import "./HowCard.css"
+import imgHowCard from "../../../assets/imageHowCard.png"
 
 export default function HowCard() {
     return (
         <div className="how-card">
-            <img className="how-card__img" src="src/assets/imageHowCard.png"/>
+            <img className="how-card__img" src={imgHowCard}/>
             <div className="how-card__text">
                 <span>Como conseguir</span>
                 <h3>minha planta</h3>
