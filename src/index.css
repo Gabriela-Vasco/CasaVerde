@@ -16,5 +16,9 @@ body {
     overflow-x: hidden; 
 }
 
+:root {
+    font-size: 112.5%; /* Set the root font size to 18px (18px * 112.5% = 20.25px) */
+  }
+
 
 

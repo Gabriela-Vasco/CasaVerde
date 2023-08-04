@@ -1,15 +1,16 @@
-.testimony-card {
+  .testimony-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 10px 10px 30px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background: url('../../../assets/quotes.png') #ffffffd8 no-repeat 20px 20px;
-    padding: 0 0 0 30px;
-}
-
-.testimony-card__text {
-    font-size: 20px;
+    box-shadow: 0.625rem 0.625rem 1.875rem 0.1875rem rgba(0, 0, 0, 0.1); /* 10px 10px 30px 3px to rem */
+    border-radius: 0.625rem; /* 10px to rem */
+    background: url('../../../assets/quotes.png') #ffffffd8 no-repeat 1.25rem 1.25rem; /* 20px 20px to rem */
+    padding: 0 0 0 1.875rem; /* 0 0 0 30px to rem */
+  }
+  
+  .testimony-card__text {
+    font-size: 1.25rem; /* 20px to rem */
     text-align: left;
-    line-height: 1.5em;
-} 
+    line-height: 1.5rem; /* 1.5em to rem */
+  }
+  

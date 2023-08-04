@@ -1,58 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&display=swap');
-
 .how-card {
-    display: flex;
-    background-color: #fff;
-    width: 900px; 
-    margin: 190px auto 0;
-    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.06));
+  display: flex;
+  background-color: #fff;
+  width: 50rem; 
+  margin: 9.375rem auto 0; 
+  filter: drop-shadow(0.625rem 0.625rem 1.875rem rgba(0, 0, 0, 0.06)); 
 }
 
 .how-card__img {
-    width: 60%;
+  width: 60%;
 }
 
 .how-card__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
 }
 
 .how-card__text span {
-    padding-left: 42px;
-    font-size: 18px;
-    opacity: 0.5;
+  padding-left: 2.625rem; 
+  font-size: 1.125rem; 
+  opacity: 0.5;
 }
 
 .how-card__text h3 {
-    font-family: Elsie Swash Caps;
-    font-size: 42px;
-    font-weight: 900;
-    margin: 0;
-    padding: 12px 0 0 42px;
+  font-family: 'Elsie Swash Caps';
+  font-size: 2.625rem; 
+  font-weight: 900;
+  margin: 0;
+  padding: 0.75rem 0 0 2.625rem; 
 }
 
-.how-card__list li{
-    list-style: none;
-    display: flex;
-    align-items: center;
+.how-card__list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-.how-card__list span{
-    padding-left: 0;
-    padding-bottom: 15px;
-    opacity: 0.5;
+.how-card__list span {
+  padding-left: 0;
+  padding-bottom: 0.9375rem;
+  opacity: 0.5;
 }
 
 .how-card--circle {
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    background-color: #FFCB47;
-    margin: 0 10px 20px 0;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem; 
+  background-color: #FFCB47;
+  margin: 0 0.625rem 1.25rem 0; 
 }
 
+@media (max-width: 500px) {
+  .how-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .how-card__img {
+    width: 100%;
+  }
+
+  .how-card__text {
+    width: 100%;
+  }
+
+  .how-card__text span {
+    padding: 1rem 0 0 1rem;
+  }
+
+  .how-card__text h3 {
+    padding-left: 1rem;
+    font-size: 1.87rem;
+  }
+
+  .how-card__list {
+    padding-left: 0.5rem;
+  }
+
+  .how-card--circle {
+    margin: 0 0.6rem 0.9rem 0; 
+  }
+
+  .how-card__list span {
+    padding-bottom: 1.8rem;
+  }
 
 
-
+}

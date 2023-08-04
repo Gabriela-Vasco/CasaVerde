@@ -1,64 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 .newsletter__form {
-  margin-top: 50px;
+  margin-top: 3.125rem; 
   display: flex;
 }
 
 .newsletter__label {
-    position: relative;
-  }
-  
-  .newsletter__label:before {
-    content: "";
-    position: absolute;
-    left: 10px;
-    top: 0;
-    bottom: 0;
-    width: 20px;
-    background: url("../../../assets/icons8-nova-mensagem-24.png") center / contain no-repeat;
-    opacity: 0.5;
+  position: relative;
+}
+
+.newsletter__label:before {
+  content: "";
+  position: absolute;
+  left: 0.625rem; 
+  top: 0;
+  bottom: 0;
+  width: 1.25rem; 
+  background: url("../../../assets/icons8-nova-mensagem-24.png") center / contain no-repeat;
+  opacity: 0.5;
+}
+
+.newsletter__input {
+  padding: 0.9375rem 2rem; 
+  border: none;
+  width: 26.875rem; 
+  height: 4.6875rem; 
+  background: #FFF;
+  box-shadow: 0.625rem 0.625rem 1.875rem 0 rgba(0, 0, 0, 0.06);
+}
+
+.newsletter__input::placeholder {
+  color: #202020;
+  font-family: Montserrat;
+  font-size: 1rem; 
+  opacity: 0.30000001192092896;
+  padding-left: 1rem; 
+}
+
+.newsletter__input:focus {
+  outline: none;
+}
+
+.newsletter__button {
+  color: #202020;
+  font-family: Montserrat;
+  font-size: 0.875rem; 
+  width: 10rem; 
+  height: 4.6875rem; 
+  background: #FFCB47;
+  box-shadow: 0.625rem 0.625rem 1.875rem 0 rgba(255, 203, 71, 0.30); 
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter__button:hover {
+  background-color: #e7b732;
+}
+
+.newsletter__form__error {
+  color: #FF0000;
+  font-weight: 550;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .newsletter__form {
+    flex-direction: column;
   }
   
   .newsletter__input {
-    padding: 18px 32px;
-    border: none;
-    width: 430px;
-    height: 75px;
-    background: #FFF;
-    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.06);
+    width: 100%;
   }
-
-    .newsletter__input::placeholder {
-        color: #202020;
-        font-family: Montserrat;
-        font-size: 16px;
-        opacity: 0.30000001192092896;
-        padding-left: 16px;
-    }
-
-    .newsletter__input:focus {
-        outline: none;
-    }
-
+  
   .newsletter__button {
-    color: #202020;
-    font-family: Montserrat;
-    font-size: 14px;
-    width: 160px;
-    height: 75px;
-    background: #FFCB47;
-    box-shadow: 10px 10px 30px 0px rgba(255, 203, 71, 0.30);
-    border: none;
-    cursor: pointer;
+    width: 100%;
+    margin-top: 1.25rem; 
   }
 
-  .newsletter__button:hover {
-    background-color: #e7b732
+  .newsletter__input::placeholder {
+    padding-left: 0.625rem; 
   }
-
-  .newsletter__form__error {
-    color: #FF0000;
-    font-weight: 550;
-    display: block;
-  }
+}

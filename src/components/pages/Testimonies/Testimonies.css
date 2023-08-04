@@ -1,42 +1,63 @@
 .testimonies__background svg {
-    max-width: 700px;
-    height: auto;
-    fill: #FFCB47;
-    position: absolute;
-    bottom: 0;
-    right: -110px;
-    z-index: -1;
+  max-width: 43.75rem; 
+  height: auto;
+  fill: #FFCB47;
+  position: absolute;
+  bottom: 0;
+  right: -6.875rem; 
+  z-index: -1;
 }
 
 .testimonies__background img {
-    width: 700px;
-    height: 1000px;
-    position: absolute;
-    top: 0px;
-    right: 50px;
-    z-index: -1;
+  width: 43.75rem; 
+  height: 62.5rem; 
+  position: absolute;
+  top: 0px;
+  right: 3.125rem; 
+  z-index: -1;
 }
 
 .testimonies__title h3 {
-    font-family: Elsie Swash Caps;
-    width: 100%;
-    font-size: 30px;
-    font-weight: 900;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Elsie Swash Caps';
+  width: 100%;
+  font-size: 1.875rem;
+  font-weight: 900;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonies__cards {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-template-rows: 250px 250px 250px;
-    grid-auto-flow: column;
-    grid-gap: 0 70px;
-    padding: 0 70px 70px;
+  margin-top: 1.875rem; 
+  display: grid;
+  grid-template-columns: repeat(3, 22.5rem); 
+  grid-template-rows: 14.0625rem 14.0625rem 14.0625rem; 
+  grid-auto-flow: column;
+  grid-gap: 0 3.43rem; 
+  padding: 0 3.43rem 3.43rem; 
 }
 
-
+@media (max-width: 500px) {
+  .testimonies__background svg {
+    width: 22.22rem; 
+    height: 22.22rem; 
+    top: -7rem; 
+    right: 0rem; 
+  }
   
-
+  .testimonies__background img {
+    visibility: hidden;
+  }
+  
+  .testimonies__title h3 {
+    font-size: 2rem; 
+  }
+  
+  .testimonies__cards {
+    grid-template: none;
+    grid-auto-flow: row;
+    grid-gap: 0; 
+    margin: 0;
+    padding: 0 1.67rem 1.67rem; 
+  }
+}

@@ -12,8 +12,9 @@ export default function Navbar(){
             <NavLink to="/">
                 <Logo />
             </NavLink>
-            
-            <div className="navbar__menu">    
+
+                           
+            <div className={`navbar__menu`}>
                 <NavLink 
                     to="/depoimentos"
                     style={({isActive}) => isActive ? activeStyles : null}
@@ -34,7 +35,8 @@ export default function Navbar(){
                 >
                     Meu Carrinho
                 </NavLink>
-            </div>
+            
+            </div> 
         </div>
 
     )

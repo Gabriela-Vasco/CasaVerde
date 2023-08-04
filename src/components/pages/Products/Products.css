@@ -1,53 +1,97 @@
 .products-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.products__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.875rem; 
+  padding: 0 3.43rem 3.43rem; 
 }
 
 .products-title {
-    font-family: Elsie Swash Caps;
-    width: 100%;
-    font-size: 30px;
-    font-weight: 900;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Elsie Swash Caps';
+  width: 100%;
+  font-size: 1.875rem;
+  font-weight: 900;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .products__sort {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.625rem 0; 
 }
 
 .products__sort > input[type="checkbox"] {
-    padding: 0 5px;
-} 
+  padding: 0 0.3125rem; 
+}
 
 .products__sort > label {
-    padding: 0 10px;
+  padding: 0 0.625rem; 
 }
 
 .products__filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.625rem 0 3.125rem; 
 }
 
 .products__filter-input {
-    margin: 0 10px;
-    width: 70px;
+  margin: 0 0.625rem; 
+  width: 4.375rem; 
 }
 
 .products__filter-button {
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    background-color: #1C1C1C;
-    padding: 3px 5px;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem; 
+  background-color: #1C1C1C;
+  padding: 0.1875rem 0.3125rem; 
+  border-radius: 0.3125rem; 
+  color: #fff;
+  cursor: pointer;
 }
 
+@media (max-width: 500px){
+
+  .products__cards {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.875rem; 
+  }
+
+  .products-title {
+    font-size: 2rem; 
+  }
+
+  .products__sort > input[type="checkbox"] {
+    padding: 0 0.3125rem; 
+  }
+
+  .products__sort > label {
+    padding: 0 0.625rem; 
+  }
+
+  .products__filter {
+    flex-direction: column;
+  }
+
+  .products__filter-input {
+    margin: 0.625rem 0; 
+    width: 60%;
+  }
+
+  .products__filter-button {
+    margin: 0.625rem 0; 
+    width: 60%;
+  }
+}

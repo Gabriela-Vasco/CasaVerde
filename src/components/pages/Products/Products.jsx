@@ -124,7 +124,7 @@ export default function Products(){
                 />
                 <button className="products__filter-button" onClick={filterPlants}>Filtrar</button>
             </div>
-            <div className="shop-section__cards">
+            <div className="products__cards">
                 {plantsElements}
             </div>
         </div>

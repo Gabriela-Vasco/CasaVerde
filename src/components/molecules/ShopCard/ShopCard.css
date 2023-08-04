@@ -1,52 +1,76 @@
 .shop-card {
-    display: flex;
-    justify-content: space-between;
-    background: #FFF;
-    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  background: #FFF;
+  box-shadow: 0.625rem 0.625rem 1.875rem 0 rgba(0, 0, 0, 0.06); 
 }
 
 .shop-card__text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 175px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 10.9375rem; 
 }
 
 .shop-card__text span {
-    font-size: 16px;
-    font-weight: 600;
-    opacity: 0.3;
-    text-align: left;
-    padding-bottom: 20px
-}   
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.3;
+  text-align: left;
+  padding-bottom: 1.25rem; 
+}
 
 .shop-card__text h4 {
-    font-family: Elsie Swash Caps;
-    font-size: 32px;
-    font-weight: 900;
-    margin: 0;
-    width: 121px;
-    padding: 27px 0 15px;
+  font-family: 'Elsie Swash Caps';
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0;
+  width: 7.5625rem; 
+  padding: 1.67rem 0 0.9375rem; 
 }
 
 .shop-card__button {
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    background-color: #1C1C1C;
-    padding: 15px 10px;
-    margin-bottom: 27px;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem; 
+  background-color: #1C1C1C;
+  padding: 0.9375rem 0.625rem; 
+  margin-bottom: 1.67rem; 
+  border-radius: 0.625rem; 
+  color: #fff;
+  cursor: pointer;
 }
 
 .shop-card__button:hover {
-    scale: 1.05;
-    transition: 0.5s;
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .shop-card__button--svg {
-    margin-left: 10px;
+  margin-left: 0.625rem; 
+}
+
+@media (max-width: 500px) {
+  .shop-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shop-card__text {
+    align-items: center;
+    width: 100%;
+  }
+  
+  .shop-card__text h4 {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .shop-card__button {
+    margin: 0.9375rem 0 1.67rem; 
+  }
+  
+  .shop-card__button--svg {
+    margin-left: 0; 
+  }
 }
